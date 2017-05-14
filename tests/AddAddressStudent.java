@@ -23,7 +23,8 @@ public class AddAddressStudent {
 		database.addPerson(student001);
 		String addressStudent001 = student001.getAddress().toString();
 		assertThat(((Student) database.firstPerson()), is(instanceOf(Student.class)));
-		assertEquals(((Person) database.firstPerson()).getAddress().toString(),addressStudent001);
+		assertEquals(((Person) database.firstPerson()).getAddress().toString(),
+				addressStudent001);
 	}
 	
 	@Test
@@ -35,7 +36,8 @@ public class AddAddressStudent {
 		database.addPerson(student001);
 		String addressStudent001 = student001.getAddress().toString();
 		assertThat(((Student) database.firstPerson()), is(instanceOf(Student.class)));
-		assertEquals(((Person) database.firstPerson()).getAddress().toString(),addressStudent001);
+		assertEquals(((Person) database.firstPerson()).getAddress().toString(),
+				addressStudent001);
 	}
 
 }

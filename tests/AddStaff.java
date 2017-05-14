@@ -20,7 +20,7 @@ public class AddStaff {
 		Staff staff001 = new Staff("Luke Skywalker", 1980, "005");	
 		database.addPerson(staff001);
 		assertThat(((Staff) database.firstPerson()), is(instanceOf(Staff.class)));
-		assertEquals(((Staff) database.firstPerson()).getName(), "Luke Skywalker");
+		assertEquals(((Person) database.firstPerson()).getName(), "Luke Skywalker");
 	}
 	
 	@Test

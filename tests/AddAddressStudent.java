@@ -14,7 +14,7 @@ public class AddAddressStudent {
 	
 	
 	@Test
-	public void testAddMarksToOneStudent()
+	public void testAddAddressToOneStudent()
 	{
 		
 		Database database = new Database();

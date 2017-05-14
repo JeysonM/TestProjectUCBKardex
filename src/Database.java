@@ -8,14 +8,14 @@ import java.util.Iterator;
 
 public class Database {
 
-	private ArrayList persons;
+	private ArrayList<Person> persons;
 
  	/**
 	 * Create a new, empty person database.
      */
   	public Database() 
 	{
-        persons = new ArrayList();
+        persons = new ArrayList<Person>();
     }
 
     /**
@@ -31,7 +31,7 @@ public class Database {
      */
     public void listAll () 
     {
-        for (Iterator i = persons.iterator(); i.hasNext();) {
+        for (Iterator<Person> i = persons.iterator(); i.hasNext();) {
             System.out.println(i.next());
         }
     }
@@ -46,7 +46,7 @@ public class Database {
   	/**
 	 * return first person of the database.
      */
-  	public ArrayList getAllPersons() 
+  	public ArrayList<Person> getAllPersons() 
 	{
         return persons;
     }

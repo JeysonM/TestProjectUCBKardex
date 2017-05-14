@@ -1,10 +1,10 @@
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+
 import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
 
-import java.util.Iterator;
-
-import org.hamcrest.Matcher;
-import org.junit.Rule;
 import org.junit.Test;
 
 
@@ -12,16 +12,18 @@ public class AddStudent {
 	
 	
 	@Test
-	public void testAddOneStudentInDataBase()
-	{
+	public void testAddOneStudentInDataBase() throws Exception{
 		Database database = new Database();
 		Student student001 = new Student("Pepe Martillo",1991,"001");	
 		student001.setAddress("Av. America", "Cochabamba","1234");
 		student001.enterMarks(8,7,4);
 		database.addPerson(student001);
-		assertEquals(((Person) database.firstPerson()).getName(), "Pepe Martillo");
+		assertThat(((Student) database.firstPerson()), is(instanceOf(Student.class)));
+		assertEquals(((Student) database.firstPerson()).getName(), "Pepe Martillo");
+		
 	}
 	
+
 	@Test
 	public void testAddTwoStudentsInDataBase()
 	{
@@ -37,6 +39,7 @@ public class AddStudent {
     	student002.enterMarks(9,9,8);
 		database.addPerson(student002);
 		
+		assertThat(((Student) database.firstPerson()), is(instanceOf(Student.class)));
 		assertEquals(((Person) database.getAllPersons().get(0)).getName(), "Pepe Martillo");
 		assertEquals(((Person) database.getAllPersons().get(1)).getName(), "Darth Vader");
 		

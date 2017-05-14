@@ -1,4 +1,6 @@
 
+import static org.hamcrest.CoreMatchers.instanceOf;
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 import java.util.Iterator;
@@ -20,6 +22,7 @@ public class AddAddressStudent {
 		student001.setAddress("Av. America", "Cochabamba","1234");
 		database.addPerson(student001);
 		String addressStudent001 = student001.getAddress().toString();
+		assertThat(((Student) database.firstPerson()), is(instanceOf(Student.class)));
 		assertEquals(((Person) database.firstPerson()).getAddress().toString(),addressStudent001);
 	}
 	
@@ -31,6 +34,7 @@ public class AddAddressStudent {
 		student001.setFullAddress("Av. America", "Cochabamba","1234","Bolivia");
 		database.addPerson(student001);
 		String addressStudent001 = student001.getAddress().toString();
+		assertThat(((Student) database.firstPerson()), is(instanceOf(Student.class)));
 		assertEquals(((Person) database.firstPerson()).getAddress().toString(),addressStudent001);
 	}
 

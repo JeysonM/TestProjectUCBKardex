@@ -8,11 +8,11 @@ import org.junit.Rule;
 import org.junit.Test;
 
 
-public class AddPersonStudent {
+public class AddStudent {
 	
 	
 	@Test
-	public void testAddOnePersonStudentInDataBase()
+	public void testAddOneStudentInDataBase()
 	{
 		Database database = new Database();
 		Student student001 = new Student("Pepe Martillo",1991,"001");	
@@ -23,7 +23,7 @@ public class AddPersonStudent {
 	}
 	
 	@Test
-	public void testAddTwoPersonStudentInDataBase()
+	public void testAddTwoStudentsInDataBase()
 	{
 		Database database = new Database();
 		

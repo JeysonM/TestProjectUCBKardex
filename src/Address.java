@@ -36,4 +36,16 @@ public class Address
                town + " " + postCode + "\n" +
                country + "\n";
     }
+    
+    
+    /**
+     * Set a new full address for this person.
+     */
+    public void setAddress(String street, String town, String postCode, String country)
+    {
+        this.street=street;
+        this.town=town;
+        this.postCode=postCode;
+        this.country=country;
+    }
 }

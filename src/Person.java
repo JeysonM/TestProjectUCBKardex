@@ -57,6 +57,14 @@ abstract class Person
     {
         address = new Address(street, town, postCode);
     }
+    
+    /**
+     * Set a new address for this person.
+     */
+    public void setFullAddress(String street, String town, String postCode,String country)
+    {
+        address = new Address(street, town, postCode,country);
+    }
 
     /**
      * Return the address of this person.

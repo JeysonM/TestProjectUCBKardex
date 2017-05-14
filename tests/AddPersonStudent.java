@@ -10,8 +10,7 @@ import org.junit.Test;
 
 public class AddPersonStudent {
 	
-    //public Database database = new Database();
-
+	
 	@Test
 	public void testAddOnePersonStudentInDataBase()
 	{

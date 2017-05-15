@@ -3,10 +3,6 @@ import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
-import java.util.Iterator;
-
-import org.hamcrest.Matcher;
-import org.junit.Rule;
 import org.junit.Test;
 
 
